@@ -6,7 +6,7 @@ import {
 
 const cn = classNames(require('./index.scss'));
 
-class NormalLoginForm extends React.Component {
+class NormalLoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {

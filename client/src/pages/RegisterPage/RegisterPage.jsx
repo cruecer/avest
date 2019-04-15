@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { classNames } from '../../helper/style';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';
+import WrappedRegistrationForm from '../../components/registerForm';
 
 const cn = classNames(require('./index.scss'));
 
@@ -21,6 +22,7 @@ class RegisterPage extends Component {
           <Button type="primary">Register</Button>
         </NavLink>
       </div>
+      <WrappedRegistrationForm />
     </div>
     )
   }
