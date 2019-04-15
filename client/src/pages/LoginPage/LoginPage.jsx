@@ -4,7 +4,7 @@ import { classNames } from '../../helper/style';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';
 import WrappedNormalLoginForm from '../../components/loginForm';
-import { toggleIsLoading, logIn } from '../../actions';
+import { logIn } from '../../actions';
 
 const cn = classNames(require('./index.scss'));
 
@@ -18,7 +18,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  toggleIsLoading,
   logIn
 };
 

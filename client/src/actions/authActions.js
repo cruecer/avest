@@ -29,11 +29,35 @@ export const authUser = (data) => {
 }
 
 export const logIn = (data) => {
-  console.log(data);
   const credentials = JSON.stringify(data)
   return dispatch => {
     dispatch(toggleIsLoading(true));
     fetch('/login', {
+      method: 'post',
+      body: credentials
+    }).then(response => response.json())
+      .then(data => {
+        if (!data.isError) {
+          dispatch(toggleIsAuthed(true));
+          dispatch(authUser(data.user));
+        } else {
+          dispatch(showErrorMsg(data.errorMsg));
+          dispatch(toggleIsLoading(false));
+        }
+      })
+      .catch(err => {
+        dispatch(toggleIsLoading(false));
+        dispatch(showErrorMsg('Connection error'))
+        throw new Error(err)
+      })
+  }
+}
+
+export const register = (data) => {
+  const credentials = JSON.stringify(data)
+  return dispatch => {
+    dispatch(toggleIsLoading(true));
+    fetch('/reg', {
       method: 'post',
       body: credentials
     }).then(response => response.json())
