@@ -1,0 +1,51 @@
+{
+  "name": "shop_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "webpack": "webpack --display-chunks --progress --watch",
+    "start": "cross-env NODE_ENV=development npm-run-all dev",
+    "build": "cross-env NODE_ENV=production npm-run-all webpack"
+  },
+  "keywords": [],
+  "author": "Ihar Ihnatovich",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "antd": "^3.16.3",
+    "classnames": "^2.2.6",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-modal": "^3.8.1",
+    "react-redux": "^6.0.0",
+    "react-router-config": "^4.4.0-beta.6",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "react-hot-loader": "^4.8.4",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  }
+}

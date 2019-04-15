@@ -1,0 +1,22 @@
+{
+  "name": "avest_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app/index.js",
+    "debug": "ndb nodemon app/index.js"
+  },
+  "author": "Ihar Ihnatovich",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "ndb": "^1.0.44",
+    "nodemon": "^1.18.11"
+  }
+}
