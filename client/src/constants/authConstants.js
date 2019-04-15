@@ -1,0 +1,4 @@
+export const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING';
+export const SHOW_ERROR_MSG = 'SHOW_ERROR_MSG';
+export const AUTH_USER = 'AUTH_USER';
+export const TOGGLE_IS_AUTHED = 'TOGGLE_IS_AUTHED';
