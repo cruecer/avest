@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 
-class LoginPage extends Component {
+class NotFoundPage extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return(
-      <div>Login</div>
+      <div>NotFound</div>
     )
   }
 }
 
-export default LoginPage;
+export default NotFoundPage;

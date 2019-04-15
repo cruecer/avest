@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Switch } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import routes from '../src/routes';
 
 class App extends Component {
   constructor(props) {
@@ -6,7 +9,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div>welcome</div>
+      <div>
+        <Switch>
+          {renderRoutes(routes)}
+        </Switch>
+      </div>
     )
   }
 }

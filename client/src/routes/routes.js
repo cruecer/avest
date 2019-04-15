@@ -1,4 +1,4 @@
-import { LoginPage, NotFoundPage, RegisterPage, CalculatorPage } from '../Pages';
+import { LoginPage, NotFoundPage, RegisterPage, CalculatorPage } from '../pages';
 
 const routes = [
   {
