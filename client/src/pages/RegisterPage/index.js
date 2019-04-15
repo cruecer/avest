@@ -1,3 +1,3 @@
-import RegistryPage from './RegistryPage';
+import RegistryPage from './RegisterPage';
 
 export default RegistryPage;

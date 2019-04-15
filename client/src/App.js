@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Switch } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import routes from '../src/routes';
+import './style.scss';
+import '../node_modules/antd/dist/antd.min.css';
 
 class App extends Component {
   constructor(props) {
@@ -9,11 +11,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <Fragment>
         <Switch>
           {renderRoutes(routes)}
         </Switch>
-      </div>
+      </Fragment>
     )
   }
 }
