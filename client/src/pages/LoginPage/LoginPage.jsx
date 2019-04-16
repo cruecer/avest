@@ -26,6 +26,12 @@ class LoginPage extends Component {
     super(props)
   }
 
+  componentDidUpdate() {
+    if(this.props.isAuthed) {
+      this.props.history.push(`/calculator/${this.props.user.nickname}`);
+    }
+  }
+
   render() {
     const { logIn, isLoading, errorMsg } = this.props;
     return(

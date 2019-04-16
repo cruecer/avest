@@ -9,7 +9,7 @@ const routes = [
     path: '/register',
     component: RegisterPage
   },{
-    path: '/calculator',
+    path: '/calculator/:user',
     component: CalculatorPage
   },{ 
     path: '*',
