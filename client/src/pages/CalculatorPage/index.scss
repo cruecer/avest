@@ -1,0 +1,22 @@
+.calculatorPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "currencies currencies" "calculator result";
+  height: 100%;
+
+  .currencies {
+    grid-area: currencies;
+    background-color: aqua
+  }
+
+  .calculator {
+    grid-area: calculator;
+    background-color: aquamarine;
+  }
+
+  .result {
+    grid-area: result;
+    background-color: bisque;
+  }
+}

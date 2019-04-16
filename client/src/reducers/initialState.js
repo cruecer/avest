@@ -1,12 +1,13 @@
 const initialState = {
   auth: {
-    user: null,
-    isAuthed: false,
+    user: {nickname: 'admin'}, //TODO: return null
+    isAuthed: true, //TODO: return false
     isLoading: false,
     errorMsg: ''
   },
   calculator: {
-    currencies: null
+    currencies: [{abb: 'USD', code: 145}, {abb: 'EUR', code: 292}, {abb: 'RUB', code: 298}],
+    rates: []
   },
 }
 
