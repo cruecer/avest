@@ -17,7 +17,7 @@ module.exports = webpackMerge(common.config, {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        loaders: ['babel-loader'],
+        loaders: ['react-hot-loader/webpack', 'babel-loader'],
       },
       {
         test: /\.(scss|sass)$/,
