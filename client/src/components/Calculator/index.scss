@@ -1,0 +1,98 @@
+.calculator {
+  display: grid;
+  padding: 100px;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "number number number number"
+                       "one  two  three  back"
+                       "four  five  six  enter"
+                       "seven  eight  nine  enter"
+                       "dot zero  clear enter";
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .number {
+    @extend .button;
+    grid-area: number;
+    border: 1px solid black;
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .one {
+    @extend .button;
+    grid-area: one;
+  }
+
+  .two  {
+    @extend .button;
+    grid-area: two;
+  }
+
+  .three {
+    @extend .button;
+    grid-area: three;
+  }
+
+  .four {
+    @extend .button;
+    grid-area: four;
+  }
+
+  .five {
+    @extend .button;
+    grid-area: five;
+  }
+
+  .six {
+    @extend .button;
+    grid-area: six; 
+  }
+
+  .seven {
+    @extend .button;
+    grid-area: seven;
+  }
+
+  .eight {
+    @extend .button;
+    grid-area: eight;
+  }
+
+  .nine {
+    @extend .button;
+    grid-area: nine;
+  }
+
+  .zero {
+    @extend .button;
+    grid-area: zero;
+  }
+
+  .back {
+    @extend .button;
+    grid-area: back;
+  }
+
+  .enter {
+    @extend .button;
+    grid-area: enter;
+  }
+
+  .clear {
+    @extend .button;
+    grid-area: clear;
+  }
+
+  .dot {
+    @extend .button;
+    grid-area: dot;
+  }
+        
+}

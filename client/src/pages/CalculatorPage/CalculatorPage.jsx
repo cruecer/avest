@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { classNames } from '../../helper/style';
 import { loadRates } from  '../../actions';
 import CurTable from '../../components/curTable';
+import Calculator from '../../components/Calculator';
 
 const cn = classNames(require('./index.scss'));
 
@@ -33,7 +34,9 @@ class CalculatorPage extends Component {
         <div className={cn('currencies')}>
           <CurTable data={rates} />
         </div>
-        <div className={cn('calculator')}>calc</div>
+        <div className={cn('calculator')}>
+          <Calculator />
+        </div>
         <div className={cn('result')}>res</div>
       </div>
     )
