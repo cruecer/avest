@@ -44,6 +44,7 @@ class RegistrationForm extends Component {
 
 
   render() {
+    const { isLoading } = this.props;
     const { getFieldDecorator } = this.props.form;
 
     const formItemLayout = {
@@ -128,7 +129,7 @@ class RegistrationForm extends Component {
           )}
         </Form.Item>
         <Form.Item {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">Register</Button>
+          <Button type="primary" htmlType="submit" loading={isLoading}>Register</Button>
         </Form.Item>
       </Form>
     );

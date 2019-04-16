@@ -27,10 +27,11 @@ class RegisterPage extends Component {
 
   render() {
 
-    const { register } = this.props;
+    const { register, isLoading, errorMsg } = this.props;
 
     return(
       <div className={cn('registerPage')}>
+      <div className={cn('err')}>{errorMsg}</div>
       <div className={cn('btns')}>
         <NavLink to='/'>
           <Button type="dashed">LogIn</Button>
@@ -39,7 +40,7 @@ class RegisterPage extends Component {
           <Button type="primary">Register</Button>
         </NavLink>
       </div>
-      <WrappedRegistrationForm handler={register}/>
+      <WrappedRegistrationForm handler={register} isLoading={isLoading}/>
     </div>
     )
   }

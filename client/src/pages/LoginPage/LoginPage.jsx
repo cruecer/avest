@@ -27,9 +27,10 @@ class LoginPage extends Component {
   }
 
   render() {
-    const { logIn } = this.props;
+    const { logIn, isLoading, errorMsg } = this.props;
     return(
       <div className={cn('loginPage')}>
+        <div className={cn('err')}>{errorMsg}</div>
         <div className={cn('btns')}>
           <NavLink to='/'>
             <Button type="primary">LogIn</Button>
@@ -38,7 +39,7 @@ class LoginPage extends Component {
             <Button type="dashed">Register</Button>
           </NavLink>
         </div>
-        <WrappedNormalLoginForm handler={logIn}/>
+        <WrappedNormalLoginForm handler={logIn} isLoading={isLoading}/>
       </div>
     )
   }

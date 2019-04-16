@@ -5,6 +5,15 @@
   align-items: center;
   height: 100%;
 
+  .err {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: red;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
   .btns {
     display: flex;
     flex-direction: row;

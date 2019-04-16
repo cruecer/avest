@@ -21,6 +21,7 @@ class NormalLoginForm extends Component {
   }
 
   render() {
+    const { isLoading } = this.props;
     const { getFieldDecorator } = this.props.form;
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
@@ -39,7 +40,7 @@ class NormalLoginForm extends Component {
           )}
         </Form.Item>
         <Form.Item className={cn('centerBtn')}>
-          <Button type="primary" htmlType="submit" className="login-form-button">
+          <Button type="primary" htmlType="submit" className="login-form-button" loading={isLoading}>
             Log in
           </Button>
         </Form.Item>
