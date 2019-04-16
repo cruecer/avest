@@ -13,14 +13,14 @@ const dataValidator = (data) => {
           return result
         } else break
       
-      case 'nickName':
+      case 'nickname':
         if (data[field].length < 3) {
           result.isError = true;
           result.errorMsg = 'First name is too short';
           return result
         } else break
 
-      case 'psw' || 'pswrpt':
+      case 'password' || 'confirm':
         if (data.password && data.confirm) {
           if (data.password === data.confirm && data[field].length >= 8) {
              break
@@ -29,7 +29,7 @@ const dataValidator = (data) => {
               result.errorMsg = 'Password is too short or does not match';
               return result;
             }
-        } else if (data[field].length < 4) {
+        } else if (data[field].length < 8) {
           result.isError = true;
           result.errorMsg = 'Password is too short';
           return result

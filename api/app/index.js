@@ -2,6 +2,7 @@ const express = require('express');
 const log = require('./utils/logger')(module);
 const dataValidator = require('./utils/dataValidator');
 const User = require('./models/user').User;
+const userDataResponse = require('./utils/userDataResponse');
 const app = express();
 
 app.use(express.static(__dirname + '/static'));
@@ -30,7 +31,7 @@ app.post('/login', (req, res) => {
           if (!user.checkPSW(body.password)) {
             return res.send(JSON.stringify({isError: true, errorMsg: 'Invalid Passord!'}))
           } else {
-            return res.send(JSON.stringify({isError: false, errorMsg: `Hello`})); 
+            return setTimeout(() => res.send(JSON.stringify({isError: false, user: userDataResponse(user)})), 1000);  // TODO: del timeout
           }
         }
       });
@@ -50,9 +51,8 @@ app.post('/reg', (req, res) => {
 
     req.on('end', () => {
       body = JSON.parse(body);
-      console.log(body);
       const result = dataValidator(body);
-      if (!result.status) {
+      if (!result.isError) {
 
         const user = new User({
             nickName: body.nickname,
@@ -65,7 +65,7 @@ app.post('/reg', (req, res) => {
               log.error(err);
               return res.send(JSON.stringify({isError: true , errorMsg: 'The user is already exist'}));
             };
-            return res.send(JSON.stringify({isError: false, errorMsg: 'Hi'}));
+            return setTimeout(() => res.send(JSON.stringify({isError: false, user: userDataResponse(user)})), 1000); //TODO: del timeout
           })
       } else {
         res.send(JSON.stringify(result));

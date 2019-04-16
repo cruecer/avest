@@ -39,6 +39,8 @@ export const logIn = (data) => {
       .then(data => {
         if (!data.isError) {
           dispatch(toggleIsAuthed(true));
+          dispatch(toggleIsLoading(false))
+          dispatch(showErrorMsg(''));
           dispatch(authUser(data.user));
         } else {
           dispatch(showErrorMsg(data.errorMsg));
@@ -64,6 +66,8 @@ export const register = (data) => {
       .then(data => {
         if (!data.isError) {
           dispatch(toggleIsAuthed(true));
+          dispatch(toggleIsLoading(false));
+          dispatch(showErrorMsg(''));
           dispatch(authUser(data.user));
         } else {
           dispatch(showErrorMsg(data.errorMsg));
