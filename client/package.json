@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
-    "webpack": "webpack --display-chunks --progress --watch",
+    "webpack": "webpack --display-chunks --progress",
     "start": "cross-env NODE_ENV=development npm-run-all dev",
     "build": "cross-env NODE_ENV=production npm-run-all webpack"
   },

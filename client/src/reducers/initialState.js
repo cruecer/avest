@@ -2,8 +2,8 @@ import { now } from "moment";
 
 const initialState = {
   auth: {
-    user: {nickname: 'admin'}, //TODO: return null
-    isAuthed: true, //TODO: return false
+    user: null,
+    isAuthed: false,
     isLoading: false,
     errorMsg: ''
   },

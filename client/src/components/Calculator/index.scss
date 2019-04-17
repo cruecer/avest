@@ -1,7 +1,9 @@
 .calculator {
   display: grid;
-  padding: 100px 20px;
+  padding: 100px 50px;
+  margin: 0 auto;
   height: 100%;
+  width: 400px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "number number number number"
@@ -20,10 +22,12 @@
   .number {
     @extend .button;
     grid-area: number;
+    margin: 0 15px;
     border: 1px solid black;
     font-family: inherit;
     font-size: 30px;
     font-weight: 600;
+    word-wrap: none;
   }
   .one {
     @extend .button;

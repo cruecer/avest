@@ -15,7 +15,6 @@ class RegistrationForm extends Component {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         this.props.handler(values);
-        console.log('Received values of form: ', values);
       }
     });
   }

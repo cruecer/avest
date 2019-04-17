@@ -25,7 +25,6 @@ class Results extends Component {
     };
     this.updateDate = this.updateDate.bind(this);
     this.interval = null;
-    
   }
 
   componentWillUnmount() {
@@ -45,7 +44,6 @@ class Results extends Component {
   render() {
     const { reloadRates, currencies, data } = this.props;
     const { date } = this.state;
-
     const columns = [{
       title: 'Currency',
       dataIndex: 'Cur_Abbreviation',

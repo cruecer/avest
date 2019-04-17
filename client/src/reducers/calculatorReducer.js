@@ -21,7 +21,7 @@ const calculatorReducer = (state = initialState.calculator, action) => {
         return {
           ...state
         }
-      } else if (checkFractional(state.BYNvalue)) {
+      } else if (checkFractional(state.BYNvalue) && state.BYNvalue.length < 16) {
         return {
           ...state,
           BYNvalue: [...state.BYNvalue, action.payload]
