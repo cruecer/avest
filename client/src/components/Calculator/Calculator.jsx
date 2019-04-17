@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { classNames } from '../../helper/style';
 import { Button, Icon } from 'antd';
 import '../../../node_modules/antd/dist/antd.min.css';
+import { addDot } from '../../actions';
 
 const cn = classNames(require('./index.scss'));
 
@@ -11,6 +12,7 @@ class Calculator extends Component {
   }
 
   render() {
+    const { BYNvalue, addNumber, delNumber, clearNumber, addDot } = this.props;
     const params = [
       {class: 'one', data: 1},
       {class: 'two', data: 2},
@@ -26,31 +28,30 @@ class Calculator extends Component {
     return(
       <div className={cn('calculator')}>
         <div className={cn('number')}>
-          
+          {BYNvalue.join('')}
         </div>
         {params.map((item, i) => {
           return (
             <div key={i} className={cn(`${item.class}`)}>
-              <Button size='large' type='primary' onClick={() => {}}>{item.data}</Button>
+              <Button size='large' type='primary' onClick={() => addNumber(item.data)}>{item.data}</Button>
             </div>
           )
         })}
         <div className={cn('back')}>
-          <Button size='large' type='primary'><Icon type='left' /></Button>
+          <Button size='large' type='primary' onClick={() => delNumber()}><Icon type='left' /></Button>
         </div>
         <div className={cn('enter')}>
           <Button size='large' type='primary'><Icon type='enter' /></Button>
         </div>
         <div className={cn('clear')}>
-          <Button size='large' type='primary'><Icon type='delete' /></Button>
+          <Button size='large' type='primary' onClick={() => clearNumber()}><Icon type='delete'/></Button>
         </div>
         <div className={cn('dot')}>
-        <Button size='large' type='primary'>.</Button>
+          <Button size='large' type='primary' onClick={() => addDot('.')}>.</Button>
         </div>
       </div>
     )
   }
-
 }
 
 export default Calculator;

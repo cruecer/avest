@@ -8,7 +8,7 @@ const initialState = {
   calculator: {
     currencies: [{abb: 'USD', code: 145}, {abb: 'EUR', code: 292}, {abb: 'RUB', code: 298}],
     rates: [],
-    BYNvalue: 0
+    BYNvalue: [],
   },
 }
 

@@ -14,17 +14,15 @@ export const addNumber = (number) => {
   }
 }
 
-export const delNumber = (number) => {
+export const delNumber = () => {
   return {
     type: calcConstants.DEL_NUMBER,
-    payload: number
   }
 }
 
-export const delLastNumber = (number) => {
+export const clearNumber = () => {
   return {
-    type: calcConstants.DEL_LAST_NUMBER,
-    payload: number
+    type: calcConstants.CLEAR_NUMBER,
   }
 }
 
