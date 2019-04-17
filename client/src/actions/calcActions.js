@@ -40,7 +40,7 @@ export const loadRates = (currencies) => {
       .then(response => response.json())
       .then(data => dispatch(saveRate(data)))
       .catch(err => {
-        dispatch(loadRates(currencie))
+        dispatch(loadRates(currencies))
         throw new Error(err)
       })
     })
