@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { classNames } from '../../helper/style';
-import { loadRates, addNumber, delNumber, clearNumber, addDot } from  '../../actions';
+import { loadRates, addNumber, delNumber, clearNumber, addDot, calculateResult } from  '../../actions';
 import CurTable from '../../components/curTable';
 import Calculator from '../../components/Calculator';
+import Results from '../../components/Results';
 
 const cn = classNames(require('./index.scss'));
 
@@ -11,7 +12,7 @@ const mapStateToProps = (state) => {
   return {
     currencies: state.calculator.currencies,
     rates: state.calculator.rates,
-    BYNvalue: state.calculator.BYNvalue
+    BYNvalue: state.calculator.BYNvalue,
   };
 };
 
@@ -21,6 +22,7 @@ const mapDispatchToProps = {
   delNumber,
   clearNumber,
   addDot,
+  calculateResult
 };
 
 class CalculatorPage extends Component {
@@ -33,7 +35,7 @@ class CalculatorPage extends Component {
   }
 
   render() {
-    const { rates, BYNvalue, addNumber, delNumber, clearNumber, addDot } = this.props;
+    const { rates, BYNvalue, addNumber, delNumber, clearNumber, addDot, calculateResult } = this.props;
     return(
       <div className={cn('calculatorPage')}>
         <div className={cn('currencies')}>
@@ -45,9 +47,13 @@ class CalculatorPage extends Component {
             addNumber={addNumber}
             delNumber={delNumber}
             clearNumber={clearNumber}
-            addDot={addDot}/>
+            addDot={addDot}
+            calculateResult={calculateResult}
+            data={rates}/>
         </div>
-        <div className={cn('result')}>res</div>
+        <div className={cn('result')}>
+          <Results />
+        </div>
       </div>
     )
   }

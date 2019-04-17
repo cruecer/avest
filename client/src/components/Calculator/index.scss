@@ -1,6 +1,6 @@
 .calculator {
   display: grid;
-  padding: 100px;
+  padding: 100px 20px;
   height: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -83,6 +83,10 @@
   .enter {
     @extend .button;
     grid-area: enter;
+  }
+
+  .enterBtn {
+    height: 86%;
   }
 
   .clear {

@@ -6,6 +6,11 @@ const calculatorReducer = (state = initialState.calculator, action) => {
   switch (action.type) {
 
     case calcConstants.SAVE_RATE:
+    if (state.rates.findIndex(item => item.Cur_ID === action.payload.Cur_ID) !== -1) {
+      return {
+        ...state,
+      }
+    } else
     return {
       ...state,
       rates: [...state.rates, action.payload]
@@ -60,8 +65,8 @@ const calculatorReducer = (state = initialState.calculator, action) => {
       return {
         ...state
       }
-
-    default: 
+    
+      default: 
       return state;
   }
 }

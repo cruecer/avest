@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { classNames } from '../../helper/style';
 import { Button, Icon } from 'antd';
 import '../../../node_modules/antd/dist/antd.min.css';
-import { addDot } from '../../actions';
 
 const cn = classNames(require('./index.scss'));
 
@@ -12,7 +11,7 @@ class Calculator extends Component {
   }
 
   render() {
-    const { BYNvalue, addNumber, delNumber, clearNumber, addDot } = this.props;
+    const { BYNvalue, addNumber, delNumber, clearNumber, addDot, calculateResult, data } = this.props;
     const params = [
       {class: 'one', data: 1},
       {class: 'two', data: 2},
@@ -41,7 +40,7 @@ class Calculator extends Component {
           <Button size='large' type='primary' onClick={() => delNumber()}><Icon type='left' /></Button>
         </div>
         <div className={cn('enter')}>
-          <Button size='large' type='primary'><Icon type='enter' /></Button>
+          <Button size='large' type='primary' className={cn('enterBtn')} onClick={() => calculateResult(BYNvalue.join(''), data)}><Icon type='enter' /></Button>
         </div>
         <div className={cn('clear')}>
           <Button size='large' type='primary' onClick={() => clearNumber()}><Icon type='delete'/></Button>

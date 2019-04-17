@@ -21,6 +21,13 @@ class curTable extends Component {
       dataIndex: 'Cur_OfficialRate',
       key: 'Cur_OfficialRate',
     },{
+      title: 'Rate date',
+      dataIndex: 'Date',
+      key: 'Date',
+      render: date => {
+        return new Date(date).toLocaleDateString();
+      },
+    },{
       title: 'Currency ID',
       dataIndex: 'Cur_ID',
       key: 'Cur_ID',

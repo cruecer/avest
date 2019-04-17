@@ -1,3 +1,5 @@
+import { now } from "moment";
+
 const initialState = {
   auth: {
     user: {nickname: 'admin'}, //TODO: return null
@@ -10,6 +12,17 @@ const initialState = {
     rates: [],
     BYNvalue: [],
   },
+  result: {
+    baseCurrencie: {
+      Cur_Abbreviation: "BYN",
+      Cur_ID: 933,
+      Cur_Name: "Белорусский рубль",
+      Cur_OfficialRate: 1,
+      Cur_Scale: 1,
+      Date: new Date()
+    },
+    data: [],
+  }
 }
 
 export default initialState;
