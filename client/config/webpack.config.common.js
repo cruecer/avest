@@ -49,8 +49,7 @@ const config = {
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
     ],
-  },
-  plugins: [new CopyWebpackPlugin([{ from: 'img', to: 'img' }])],
+  }
 };
 
 module.exports = {
