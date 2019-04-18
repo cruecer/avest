@@ -1,0 +1,22 @@
+{
+  "name": "avest",
+  "version": "1.0.0",
+  "description": "avest test task",
+  "main": "index.js",
+  "scripts": {
+    "installApi": " cd ./api && npm install",
+    "installClient": "cd ./client && npm install",
+    "build": "cd ./client && npm run build",
+    "start": "npm run installApi && npm run installClient && npm run build && cd ./api && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cruecer/avest.git"
+  },
+  "author": "Ihar Ihnatovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cruecer/avest/issues"
+  },
+  "homepage": "https://github.com/cruecer/avest#readme"
+}
